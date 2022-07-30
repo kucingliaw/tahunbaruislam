@@ -1,0 +1,97 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+
+    background: white;
+
+    nav {
+        position: relative;
+        padding-block: 1.5rem;
+    }
+    &__logo {
+        img {
+            width: 5rem;
+        }
+    }
+
+    // hamburger
+    &__btn {
+        border: none;
+        outline: none;
+        background-color: rgba(255, 255, 255, 0);
+        cursor: pointer;
+
+        @include breakpoint-up(large) {
+            display: none;
+        }
+        > span {
+            display: block;
+            width: 25px;
+            height: 3px;
+
+            background-color: $primary-clr;
+
+            transition: 0.3s all;
+
+            &:not(:last-child) {
+                margin-bottom: 4px;
+            }
+        }
+
+        // hamburger open style
+        &.open {
+            > span:first-child {
+                transform: translateY(7px) rotate(45deg);
+            }
+
+            > span:nth-child(2) {
+                opacity: 0;
+            }
+
+            > span:last-child {
+                transform: translateY(-7px) rotate(-45deg);
+            }
+        }
+    }
+
+    // menu
+    &__links {
+        display: block;
+        background: white;
+
+        // mobile menu
+        @include breakpoint-down(medium) {
+            position: absolute;
+            top: calc(0px + 110px);
+            left: 0;
+            right: 0;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        // desktop menu
+        a {
+            font-weight: 500;
+            color: $primary-clr;
+
+            &:hover {
+                color: $primary-clr-light;
+            }
+
+            @include breakpoint-up(large) {
+                margin-left: 4rem;
+                font-weight: 500;
+                transition: 0.3s;
+            }
+
+            @include breakpoint-down(large) {
+                margin-block: 2rem;
+            }
+        }
+    }
+}
