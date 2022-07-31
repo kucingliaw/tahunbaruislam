@@ -1,0 +1,33 @@
+.kelompok {
+    padding-top: 3.5rem;
+
+    .wrapper {
+        flex-wrap: wrap;
+        gap: 1rem;
+
+        @include breakpoint-down(small) {
+            justify-content: space-between;
+        }
+    }
+
+    .card {
+        padding: 1rem;
+        // background: lightblue;
+
+        &__img {
+            width: 8rem;
+            border-radius: 50rem;
+        }
+
+        &__title {
+            margin-bottom: 0;
+            // font-family: $accent-font;
+            font-weight: 600;
+        }
+
+        &__subtitle {
+            margin-top: 0;
+            font-size: 1rem;
+        }
+    }
+}

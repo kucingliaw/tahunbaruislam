@@ -1,0 +1,18 @@
+.amalan {
+    margin-block: 8rem;
+
+    .row {
+        @include breakpoint-down(medium) {
+            flex-direction: column;
+        }
+    }
+
+    &__text,
+    &__img {
+        width: 50%;
+
+        @include breakpoint-down(medium) {
+            width: 100%;
+        }
+    }
+}
