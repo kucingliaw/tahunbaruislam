@@ -1,0 +1,13 @@
+.video {
+    .iframe__container {
+        width: min(100%, 720px);
+        aspect-ratio: 16 / 9;
+
+        margin: 3rem auto;
+    }
+
+    iframe {
+        width: 100%;
+        height: 100%;
+    }
+}
