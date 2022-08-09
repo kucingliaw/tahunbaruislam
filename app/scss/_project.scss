@@ -1,0 +1,25 @@
+.project {
+    padding-block: 7rem;
+
+    &__title {
+        margin-bottom: 5rem;
+    }
+
+    .row {
+        @include breakpoint-down(medium) {
+            flex-direction: column;
+        }
+    }
+
+    &__data--title {
+        font-weight: 700;
+    }
+
+    &__img {
+        width: 80%;
+
+        @include breakpoint-down(medium) {
+            width: 100%;
+        }
+    }
+}
